@@ -1,0 +1,17 @@
+{
+  "id": "host2",
+  "name": "etcd host 2",
+  "profile": "etcd",
+  "selector": {
+    "mac": "00:00:00:00:00:02"
+  },
+  "metadata": {
+    "ipv4_address": "10.10.10.11",
+    "networkd_gateway": "172.15.0.1",
+    "networkd_dns": "172.15.0.3",
+    "networkd_address": "10.10.10.10/16",
+    "fleet_metadata": "role=etcd,name=node2",
+    "etcd_name": "node2",
+    "etcd_initial_cluster": "node1=http://10.10.10.10:2380,node2=http://10.10.10.11:2380,node3=http://10.10.10.12:2380"
+  }
+}
