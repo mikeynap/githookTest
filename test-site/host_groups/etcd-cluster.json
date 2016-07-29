@@ -24,7 +24,7 @@
                 "etcd_name": "{{ .etcdnodes.node2.etcd_name }}",
                 "networkd_address": "{{ .etcdnodes.node2.networkd_address }}",
                 "fleet_metadata": "role=etcd,name={{ .etcdnodes.node2.etcd_name }}"
-            },
+            }
 
         },
         {
