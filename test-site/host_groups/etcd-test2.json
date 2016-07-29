@@ -1,31 +1,20 @@
 {
-    "id": "etcd-cluster",
+    "id": "etcd-proxy",
     "name": "Etcd Cluster",
     "hosts": [
         {
-            "id": "host1",
+            "id": "proxy1",
             "selectors": {
-                "mac": "00:00:00:00:00:01"
+                "mac": "00:00:00:00:00:04"
             },
             "metadata": {
-                "ipv4_address": "{{ .etcdnodes.node1.ipv4 }}",
-                "etcd_name": "{{ .etcdnodes.node1.etcd_name }}",
-                "networkd_address": "{{ .etcdnodes.node1.networkd_address }}",
-                "fleet_metadata": "role=etcd,name={{ .etcdnodes.node1.etcd_name }}"
             }   
         },
         {
-            "id": "host2",
+            "id": "proxy2",
             "selectors": {
-                "mac": "00:00:00:00:00:02"
-            },
-            "metadata": {
-                "ipv4_address": "{{ .etcdnodes.node2.ipv4 }}",
-                "etcd_name": "{{ .etcdnodes.node2.etcd_name }}",
-                "networkd_address": "{{ .etcdnodes.node2.networkd_address }}",
-                "fleet_metadata": "role=etcd,name={{ .etcdnodes.node2.etcd_name }}"
-            },
-
+                "mac": "00:00:00:00:00:05"
+            }
         },
         {
             "id": "host3",
@@ -47,14 +36,13 @@
         "coreos.first_boot": ""
     },
     "metadata": {
+        "fleet_metadata": "role=etcd-proxy",
         "etcd_initial_cluster": "{{ .etcd_initial_cluster }}",
-        "networkd_gateway": "{{ .networkd_gateway }}",
-        "networkd_dns": "{{ .networkd_dns }}",
         "ssh_authorized_keys": []
     },
     "asset_needs": {
         "ignition": [
-            "etcd.yaml"
+            "etcd-proxy.yaml"
         ],
         "static": [
             "coreos/899.17.0/coreos_production_pxe.vmlinuz",
