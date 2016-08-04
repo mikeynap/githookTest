@@ -1,6 +1,6 @@
 ---
 id: etcd-cluster
-name: Etcd Cluster Copy
+name: Etcd Cluster
 
 operating_system: coreos-1053.2.0-stable
 
