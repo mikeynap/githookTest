@@ -1,21 +1,21 @@
 ---
 host_group: etcd-cluster-copy
 hosts:
-- name: host1
+- name: host99
   selectors:
     mac: 00:00:00:00:00:01
   metadata:
     ipv4: 10.10.10.10
     networkd_address: 10.10.10.10/16
     etcd_name: node1
-- name: host2
+- name: host32
   selectors:
     mac: 00:00:00:00:00:02
   metadata:
     ipv4: 10.10.10.11
     networkd_address: 10.10.10.11/16
     etcd_name: node2
-- name: host3
+- name: host33
   selectors:
     mac: 00:00:00:00:00:03
   metadata:
