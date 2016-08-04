@@ -3,9 +3,9 @@ host_group: etcd-cluster-copy
 hosts:
 - name: host99
   selectors:
-    mac: 20:00:00:00:00:01
+    mac: 22:22:00:00:00:01
   metadata:
-    ipv4: 10.10.10.10
+    ipv4: 20.10.10.10
     networkd_address: 10.10.10.10/16
     etcd_name: node123
 - name: host32
