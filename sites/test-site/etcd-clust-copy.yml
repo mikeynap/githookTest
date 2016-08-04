@@ -7,14 +7,14 @@ hosts:
   metadata:
     ipv4: 10.10.10.10
     networkd_address: 10.10.10.10/16
-    etcd_name: node1
+    etcd_name: node123
 - name: host32
   selectors:
     mac: 00:00:00:00:00:02
   metadata:
     ipv4: 10.10.10.11
     networkd_address: 10.10.10.11/16
-    etcd_name: node2
+    etcd_name: node243
 - name: host33
   selectors:
     mac: 00:00:00:00:00:03
