@@ -1,12 +1,12 @@
 ---
 id: etcd-cluster
-name: Etcd Cluster Copy
+name: Etcd Cluster
 
 operating_system: coreos-1053.2.0-stable
 
 unattended:
   type: ignition
-  use: ignition/etcd.yaml
+  use: etcd
 
 metadata:
   fleet_role: etcd
