@@ -1,0 +1,10 @@
+---
+host_group: etcd-cluster
+hosts:
+- name: host223
+  selectors:
+    mac: 00:00:03:00:00:22
+  metadata:
+    ipv4: 10.10.10.29
+    networkd_address: 10.10.10.29/16
+    etcd_name: node7
