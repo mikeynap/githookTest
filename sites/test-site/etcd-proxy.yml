@@ -1,9 +1,0 @@
----
-host_group: etcd-proxy
-hosts:
-- name: proxy3
-  selectors:
-    mac: 00:00:00:00:00:09
-- name: proxy4
-  selectors:
-    mac: 00:00:00:00:00:10
