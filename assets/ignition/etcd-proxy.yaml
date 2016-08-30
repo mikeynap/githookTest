@@ -18,6 +18,18 @@ systemd:
             [Service]
             Environment="FLEET_METADATA={{.group.fleet_metadata}}"
 {{ if index .env "ssh_authorized_keys" }}
+networkd:
+  units:
+    - name: 10-static.network
+      contents: |
+        [Match]
+        MACAddress={{.host.mac}}
+        [Network]
+        Gateway={{.env.networkd_gateway}}
+        DNS={{.env.networkd_dns}}
+        Address={{.host.networkd_address}}
+{{ if index .env "ssh_authorized_keys" }}
+
 passwd:
   users:
     - name: core
