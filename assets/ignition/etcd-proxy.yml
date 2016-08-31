@@ -10,23 +10,7 @@ systemd:
             Environment="ETCD_PROXY=on"
             Environment="ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379"
             Environment="ETCD_INITIAL_CLUSTER={{.env.etcd_initial_cluster}}"
-    - name: fleet.service
-      enable: true
-      dropins:
-        - name: fleet-metadata.conf
-          contents: |
-            [Service]
-            Environment="FLEET_METADATA={{.group.fleet_metadata}}"
-networkd:
-  units:
-    - name: 10-static.network
-      contents: |
-        [Match]
-        MACAddress={{.host.mac}}
-        [Network]
-        Gateway={{.env.networkd_gateway}}
-        DNS={{.env.networkd_dns}}
-        Address={{.host.networkd_address}}
+
 {{ if index .env "ssh_authorized_keys" }}
 
 passwd:
