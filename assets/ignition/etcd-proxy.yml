@@ -11,6 +11,14 @@ systemd:
             Environment="ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379"
             Environment="ETCD_INITIAL_CLUSTER={{.env.etcd_initial_cluster}}"
 {{ if index .env "ssh_authorized_keys" }}
+    - name: fleet.service
+      enable: true
+      dropins:
+        - name: fleet-metadata.conf
+          contents: |
+            [Service]
+            Environment="FLEET_METADATA={{.group.fleet_metadata}}"
+
 passwd:
   users:
     - name: core
