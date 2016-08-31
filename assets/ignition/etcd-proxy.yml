@@ -17,7 +17,6 @@ systemd:
           contents: |
             [Service]
             Environment="FLEET_METADATA={{.group.fleet_metadata}}"
-{{ if index .env "ssh_authorized_keys" }}
 networkd:
   units:
     - name: 10-static.network

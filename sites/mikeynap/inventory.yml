@@ -4,7 +4,8 @@ hosts:
 - name: proxy1
   selectors:
     mac: 70:CA:9B:CE:25:B5
+    domain: cisco.com
   metadata:
-    ipv4_address: 10.86.204.20
+    ipv4_address: 10.86.204.14
     networkd_address: 10.86.204.0/23
     etcd_name: node1
