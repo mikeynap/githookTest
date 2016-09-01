@@ -12,7 +12,7 @@ host_group: etcd-cluster
 hosts:
 - name: host1
   selectors:
-    mac: 30:E4:DB:C2:FE:E6
+    mac: 30:E4:DB:C2:FE:E7
   metadata:
     ipv4_address: 10.86.204.30
     networkd_address: 10.86.204.30/23

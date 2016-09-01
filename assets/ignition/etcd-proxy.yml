@@ -23,13 +23,6 @@ systemd:
 
 networkd:
   units:
-    - name: 00-ens1f1.network
-      contents: |
-        [Match]
-        Name=ens1f1
-        [Network]
-        Address=9.9.9.9
-
     - name: 10-static.network
       contents: |
         [Match]
