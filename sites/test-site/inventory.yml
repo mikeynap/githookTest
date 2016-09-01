@@ -9,7 +9,7 @@ host_group: etcd-cluster
 hosts:
 - name: host1
   selectors:
-    mac: 00:00:00:00:00:09
+    mac: 30:E4:DB:C2:FE:E6
   metadata:
     ipv4_address: 10.86.204.30
     networkd_address: 10.86.204.30/23
@@ -21,10 +21,3 @@ hosts:
     ipv4_address: 10.86.204.31
     networkd_address: 10.86.204.31/23
     etcd_name: node2
-- name: host3
-  selectors:
-    mac: 00:00:00:00:00:03
-  metadata:
-    ipv4_address: 10.86.204.32
-    networkd_address: 10.86.204.32/23
-    etcd_name: node3
