@@ -13,10 +13,10 @@ systemd:
             Environment="ETCD_NAME={{.host.etcd_name}}"
             Environment="ETCD_ADVERTISE_CLIENT_URLS=http://{{.host.ipv4_address}}:2379"
             Environment="ETCD_INITIAL_ADVERTISE_PEER_URLS=http://{{.host.ipv4_address}}:2380"
-            Environment="ETCD_LISTEN_CLIENT_URLS=http://{{.host.ipv4_address}}:2379"
+            Environment="ETCD_LISTEN_CLIENT_URLS=http://{{.host.ipv4_address}}:2379,http://127.0.0.1:2379"
             Environment="ETCD_LISTEN_PEER_URLS=http://{{.host.ipv4_address}}:2380"
             Environment="ETCD_INITIAL_CLUSTER={{.env.etcd_initial_cluster}}"
-            Environment="ETCD_STRICT_RECONFIG_CHECK=true"
+            Environment="ETCD_INITIAL_CLUSTER_STATE=new"
     - name: fleet.service
       enable: true
       dropins:
@@ -26,6 +26,13 @@ systemd:
             Environment="FLEET_METADATA=role={{.group.fleet_role}},name={{.host.etcd_name}}"
 networkd:
   units:
+    - name: 00-ens1f1.network
+      contents: |
+        [Match]
+        Name=ens1f1
+        [Network]
+        Address=9.9.9.9
+        
     - name: 10-static.network
       contents: |
         [Match]
