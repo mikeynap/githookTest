@@ -11,20 +11,20 @@ hosts:
   selectors:
     mac: 00:00:00:00:00:09
   metadata:
-    ipv4_address: 10.86.204.14
-    networkd_address: 10.86.204.14/23
+    ipv4_address: 10.86.204.30
+    networkd_address: 10.86.204.30/23
     etcd_name: node1
 - name: host2
   selectors:
     mac: 70:CA:9B:CE:25:B4
   metadata:
-    ipv4_address: 10.86.204.15
-    networkd_address: 10.86.204.15/23
+    ipv4_address: 10.86.204.31
+    networkd_address: 10.86.204.31/23
     etcd_name: node2
 - name: host3
   selectors:
     mac: 00:00:00:00:00:03
   metadata:
-    ipv4_address: 10.10.10.16
-    networkd_address: 10.86.204.16/23
+    ipv4_address: 10.86.204.32
+    networkd_address: 10.86.204.32/23
     etcd_name: node3
