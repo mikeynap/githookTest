@@ -16,7 +16,7 @@ hosts:
     etcd_name: node1
 - name: host2
   selectors:
-    mac: 00:00:00:00:00:02
+    mac: 70:CA:9B:CE:25:B4
   metadata:
     ipv4_address: 10.10.10.15
     networkd_address: 10.86.204.15/23
