@@ -13,7 +13,7 @@ systemd:
             Environment="ETCD_NAME={{.host.etcd_name}}"
             Environment="ETCD_ADVERTISE_CLIENT_URLS=http://{{.host.ipv4_address}}:2379"
             Environment="ETCD_INITIAL_ADVERTISE_PEER_URLS=http://{{.host.ipv4_address}}:2380"
-            Environment="ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379"
+            Environment="ETCD_LISTEN_CLIENT_URLS=http:/{{.host.ipv4_address}}:2379"
             Environment="ETCD_LISTEN_PEER_URLS=http://{{.host.ipv4_address}}:2380"
             Environment="ETCD_INITIAL_CLUSTER={{.env.etcd_initial_cluster}}"
             Environment="ETCD_STRICT_RECONFIG_CHECK=true"
