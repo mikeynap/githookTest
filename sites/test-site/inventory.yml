@@ -17,6 +17,8 @@ hosts:
 - name: host2
   selectors:
     mac: 70:CA:9B:CE:25:B4
+    serial: QCI1534AG60
+    uuid: 7839eea4-cff3-11e0-bd1d-708105ffb2a8
   metadata:
     ipv4_address: 10.86.204.15
     networkd_address: 10.86.204.15/23
