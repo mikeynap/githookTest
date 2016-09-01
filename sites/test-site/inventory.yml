@@ -18,7 +18,7 @@ hosts:
   selectors:
     mac: 70:CA:9B:CE:25:B4
   metadata:
-    ipv4_address: 10.10.10.15
+    ipv4_address: 10.86.204.15
     networkd_address: 10.86.204.15/23
     etcd_name: node2
 - name: host3
