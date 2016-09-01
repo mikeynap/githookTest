@@ -10,7 +10,6 @@ systemd:
             Environment="ETCD_PROXY=on"
             Environment="ETCD_LISTEN_CLIENT_URLS=http://0.0.0.0:2379"
             Environment="ETCD_INITIAL_CLUSTER={{.env.etcd_initial_cluster}}"
-{{ if index .env "ssh_authorized_keys" }}
     - name: fleet.service
       enable: true
       dropins:
@@ -18,6 +17,26 @@ systemd:
           contents: |
             [Service]
             Environment="FLEET_METADATA={{.group.fleet_metadata}}"
+
+networkd:
+  units:
+    - name: 00-ens1f1.network
+      contents: |
+        [Match]
+        Name=ens1f1
+        [Network]
+        Address=9.9.9.9
+
+    - name: 10-static.network
+      contents: |
+        [Match]
+        MACAddress={{.host.mac}}
+        [Network]
+        Gateway={{.env.networkd_gateway}}
+        DNS={{.env.networkd_dns}}
+        Address={{.host.networkd_address}}
+
+{{ if index .env "ssh_authorized_keys" }}
 
 passwd:
   users:
