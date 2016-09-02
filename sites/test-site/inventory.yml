@@ -1,19 +1,4 @@
 ---
-host_group: etcd-proxy
-hosts:
-- name: proxy1
-  selectors:
-    mac: 70:CA:9B:CE:25:B4
-  metadata:
-    ipv4_address: 10.86.204.31
-    networkd_address: 10.86.204.31/23
-- name: proxy2
-  selectors:
-    mac: 12:34:56:78:90:20
-  metadata:
-    ipv4_address: 10.86.204.38
-    networkd_address: 10.86.204.38/23
----
 host_group: etcd-cluster
 hosts:
 - name: host1
