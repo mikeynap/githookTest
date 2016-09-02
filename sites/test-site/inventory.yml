@@ -7,6 +7,11 @@ hosts:
   metadata:
     ipv4_address: 10.86.204.31
     networkd_address: 10.86.204.31/23
+- name: proxy2
+  selectors:
+    mac: 12:34:56:78:90:11
+  metadata:
+    ipv4_address: 10.86.204.38
 ---
 host_group: etcd-cluster
 hosts:
