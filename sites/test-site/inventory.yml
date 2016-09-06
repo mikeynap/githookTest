@@ -13,6 +13,12 @@ hosts:
   metadata:
     ipv4_address: 10.86.204.38
     networkd_address: 10.86.204.38/23
+- name: SM1
+  selectors:
+     mac: 00:30:48:7f:e7:8a
+  metadata:
+     ipv4_address: 10.86.204.52
+     networkd_address: 10.86.204.52/23
 ---
 host_group: etcd-cluster
 hosts:
