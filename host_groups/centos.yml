@@ -1,0 +1,9 @@
+---
+id: etcd-cluster
+name: Etcd Cluster
+
+operating_system: centos7-stable
+
+unattended:
+  type: kickstart
+  use: centos.yml
