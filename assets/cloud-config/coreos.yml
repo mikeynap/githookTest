@@ -1,0 +1,7 @@
+#cloud-config
+
+users:
+  - name: "bosco"
+    passwd: "$1$F8E5BAwU$7K.fw1n4cibjvK.YiLfR21"
+    groups:
+      - "sudo"

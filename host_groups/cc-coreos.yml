@@ -1,0 +1,9 @@
+---
+id: cccoreos
+name: CloudConfigcoreos
+
+operating_system: coreos-1053.2.0-stable
+
+unattended:
+  type: cloud-config
+  use: coreos.yml
