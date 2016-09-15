@@ -30,9 +30,9 @@ hosts:
     networkd_address: 10.86.204.30/23
     etcd_name: node1
 ---
-host_group: centos
+host_group: cccoreos
 hosts:
-- name: cent1
+- name: core1
   selectors:
     mac: 70:CA:9B:CE:25:B4
   metadata:
