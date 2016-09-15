@@ -3,7 +3,7 @@ host_group: etcd-proxy
 hosts:
 - name: proxy1
   selectors:
-    mac: 70:CA:9B:CE:25:B4
+    mac: 70:CA:9B:CE:25:B9
   metadata:
     ipv4_address: 10.86.204.31
     networkd_address: 10.86.204.31/23
@@ -29,3 +29,12 @@ hosts:
     ipv4_address: 10.86.204.30
     networkd_address: 10.86.204.30/23
     etcd_name: node1
+---
+host_group: centos
+hosts:
+- name: cent1
+  selectors:
+    mac: 70:CA:9B:CE:25:B4
+  metadata:
+    ipv4_address: 10.86.204.40
+    networkd_address: 10.86.204.40/23

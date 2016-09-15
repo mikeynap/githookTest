@@ -1,6 +1,6 @@
 ---
-id: etcd-cluster
-name: Etcd Cluster
+id: centos
+name: centosInstall
 
 operating_system: centos7-stable
 
