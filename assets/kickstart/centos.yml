@@ -56,3 +56,4 @@ part /home --fstype ext3 --size=100 --grow
 @ Base
 openssh-clients
 openssh-server
+%end
