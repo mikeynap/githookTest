@@ -1,7 +1,19 @@
 #cloud-config
 
-users:
-  - name: "bosco"
-    passwd: "$1$F8E5BAwU$7K.fw1n4cibjvK.YiLfR21"
-    groups:
-      - "sudo"
+# Add groups to the system
+# The following example adds the ubuntu group with members foo and bar and
+# the group cloud-users.
+coreos:
+  units:
+    - name: etcd2.service
+      command: start
+    - name: fleet.service
+      command: start
+
+  etcd2:
+    # multi-region and multi-cloud deployments need to use $public_ipv4
+    proxy: "on"
+    listen-client-urls: "http://0.0.0.0:2379"
+    initial-cluster: "{{.env.etcd_initial_cluster}}"
+
+hostname: "{{.host.hostname}}"
