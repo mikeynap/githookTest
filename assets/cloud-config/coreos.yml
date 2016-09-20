@@ -16,4 +16,3 @@ coreos:
     listen-client-urls: "http://0.0.0.0:2379"
     initial-cluster: "{{.env.etcd_initial_cluster}}"
 
-hostname: "{{.host.hostname}}"
